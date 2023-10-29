@@ -17,4 +17,8 @@
   border-radius: 5px;
   color: #FFF;
   background-color: #00A5FF;
+
+  @media screen and (max-width: 480px) {
+    padding: 8px 12px;
+  }
 }

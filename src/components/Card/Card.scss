@@ -41,10 +41,18 @@
     font-size: 20px;
     font-weight: 600;
     text-decoration: line-through;
+
+    @media screen and (max-width: 480px) {
+      font-size: 18px;
+    }
   }
 
   .card__price {
     font-size: 27px;
     font-weight: 600;
+    
+    @media screen and (max-width: 480px) {
+      font-size: 22px;
+    }
   }
 }

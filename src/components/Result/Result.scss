@@ -1,6 +1,11 @@
 .result {
   .container {
     padding: 45px 50px 0;
+
+    @media screen and (max-width: 480px) {
+      padding: 20px;
+      height: 380px;
+    }
   }
 
   .title {
@@ -13,6 +18,10 @@
     font-size: 20px;
     margin-bottom: 63px;
     max-width: 580px;
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 40px;
+    }
   }
 
   .cards {

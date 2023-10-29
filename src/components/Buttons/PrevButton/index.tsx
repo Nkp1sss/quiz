@@ -1,5 +1,6 @@
-import './PrevButton.scss';
 import { PrevBtnPropsType } from './types';
+
+import './PrevButton.scss';
 
 export default function PrevButton({ prevQuestion }: PrevBtnPropsType) {
   return (

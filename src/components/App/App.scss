@@ -1,1 +1,20 @@
 @import 'normalize.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+#root {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 8px 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  color: #FFF;
+  background-color: #00A5FF;
+}

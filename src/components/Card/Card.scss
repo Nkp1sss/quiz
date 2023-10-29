@@ -1,0 +1,50 @@
+.card {
+  position: relative;
+  max-width: 240px;
+
+  .heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .image-container {
+    width: 240px;
+    height: 240px;
+    border-radius: 6.75px;
+    border: 1px solid #E9E9E9;
+    margin-bottom: 16px;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 12px;
+  }
+
+  .card-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card__oldPrice {
+    color: #B8B8B8;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: line-through;
+  }
+
+  .card__price {
+    font-size: 27px;
+    font-weight: 600;
+  }
+}

@@ -1,5 +1,7 @@
-export default function ResultButton() {
+import { ResultBtnPropsType } from "./types";
+
+export default function ResultButton({ getResults }: ResultBtnPropsType) {
   return (
-    <button className="button result-btn">Узнать результат</button>
+    <button onClick={getResults} className="button result-btn">Узнать результат</button>
   );
 }

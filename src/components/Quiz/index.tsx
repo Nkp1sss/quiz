@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { questions } from './constants';
-import { SelectedItemsType } from './types';
+import { QuizPropsType, SelectedItemsType } from './types';
 import Question from '../Question';
 import PrevButton from '../Buttons/PrevButton';
 import NextButton from '../Buttons/NextButton';
@@ -8,7 +8,7 @@ import ResultButton from '../Buttons/ResultButton';
 
 import './Quiz.scss';
 
-export default function Quiz() {
+export default function Quiz({ getResults }: QuizPropsType) {
   const [currentQuestion, setCurrentQuestion] = useState<number>(1);
   const [selectedItems, setSelectedItems] = useState<SelectedItemsType>({});
 
@@ -58,7 +58,11 @@ export default function Quiz() {
                 nextQuestion={() => setCurrentQuestion(currentQuestion + 1)}
               />
             }
-            {currentQuestion === questions.length && <ResultButton />}
+            {currentQuestion === questions.length &&
+              <ResultButton
+                getResults={getResults}
+              />
+            }
           </div>
         </div>
       </div>

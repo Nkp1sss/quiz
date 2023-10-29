@@ -6,7 +6,6 @@ import './Result.scss';
 
 export default function Result() {
   const [data, setData] = useState<CardType[]>([]);
-  console.log(data);
 
   useEffect(() => {
     const getData = async () => {
@@ -27,11 +26,15 @@ export default function Result() {
         <p className="message">
           Мы подобрали для вас наиболее подходящие средства
         </p>
-        {JSON.stringify(data) !== '[]' && (
-          <div className="cards">
-            { data.map(item => <Card {...item} />) }
-          </div>
-        )}
+        {
+          JSON.stringify(data) !== '[]' ? (
+            <div className="cards">
+              { data.map(item => <Card key={item.id} {...item} />) }
+            </div>
+          ) : (
+            <p className="loading">Loading...</p>
+          )
+        }
       </div>
     </main>
   );

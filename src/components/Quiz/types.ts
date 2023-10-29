@@ -2,4 +2,8 @@ type SelectedItemsType = {
   [key: string]: string;
 };
 
-export type { SelectedItemsType };
+type QuizPropsType = {
+  getResults: () => void;
+};
+
+export type { SelectedItemsType, QuizPropsType };

@@ -2,9 +2,7 @@ import { useState } from 'react';
 import { questions } from './constants';
 import { QuizPropsType, SelectedItemsType } from './types';
 import Question from '../Question';
-import PrevButton from '../Buttons/PrevButton';
-import NextButton from '../Buttons/NextButton';
-import ResultButton from '../Buttons/ResultButton';
+import Button from '../Button';
 
 import './Quiz.scss';
 
@@ -49,18 +47,22 @@ export default function Quiz({ getResults }: QuizPropsType) {
           />
           <div className="buttons">
             {currentQuestion !== 1 &&
-              <PrevButton
-                prevQuestion={() => setCurrentQuestion(currentQuestion - 1)}
+              <Button
+                onClick={() => setCurrentQuestion(currentQuestion - 1)}
+                text="Назад"
+                classes="prev-btn"
               />
             }
             {currentQuestion !== questions.length &&
-              <NextButton
-                nextQuestion={() => setCurrentQuestion(currentQuestion + 1)}
+              <Button
+                onClick={() => setCurrentQuestion(currentQuestion + 1)}
+                text="Дальше"
               />
             }
             {currentQuestion === questions.length &&
-              <ResultButton
-                getResults={getResults}
+              <Button
+                onClick={getResults}
+                text="Дальше"
               />
             }
           </div>
